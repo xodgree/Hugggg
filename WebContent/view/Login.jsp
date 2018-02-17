@@ -6,7 +6,6 @@
 <head>
         <head>
                 <title>Login</title>
-                <meta charset="UTF-8">
                 <meta name="viewport" content="width=device-width, initial-scale=1">
             <!--===============================================================================================-->	
                 <link rel="icon" type="image/png" href="assets/assets_login/images/icons/favicon.ico"/>
@@ -38,17 +37,17 @@
                         <div class="wrap-login100 p-t-85 p-b-20">
                             <form class="login100-form validate-form">
                                 <span class="login100-form-title p-b-70">
-                                    <!-- Ïõ∞Ïª¥ Î©îÏÑ∏ÏßÄ -->
+                                    <!-- ¿£ƒƒ ∏ﬁºº¡ˆ -->
                                     Welcome
                                 </span>
                                 <span class="login100-form-avatar">
-                                    <!-- ÏïÑÎ∞îÌÉÄ Ïù¥ÎØ∏ÏßÄ -->
+                                    <!-- æ∆πŸ≈∏ ¿ÃπÃ¡ˆ -->
                                     <img src="assets/assets_main/images/avatar.jpg" alt="AVATAR">
                                 </span>
             
                                 <div class="wrap-input100 validate-input m-t-50 m-b-35" data-validate = "Enter username">
                                     <!-- Username -->
-                                    <!-- ÏÇ¨Ïö©Ïûê ÏûÖÎ†• Î∞õÎäî input -->
+                                    <!-- ªÁøÎ¿⁄ ¿‘∑¬ πﬁ¥¬ input -->
                                     <input class="input100" type="text" name="username">
                                     <span class="focus-input100" data-placeholder="Username"></span>
                                 </div>
@@ -56,29 +55,30 @@
                                 <div class="wrap-input100 validate-input m-b-50" data-validate="Enter password">
                                     <input class="input100" type="password" name="pass">
                                     <!-- password -->
-                                    <!-- ÏÇ¨Ïö©Ïûê ÎπÑÎ∞ÄÎ≤àÌò∏ ÏûÖÎ†• Î∞õÎäî input  -->
+                                    <!-- ªÁøÎ¿⁄ ∫Òπ–π¯»£ ¿‘∑¬ πﬁ¥¬ input  -->
                                     <span class="focus-input100" data-placeholder="Password"></span>
                                 </div>
             
                                 <div class="container-login100-form-btn">
-                                    <!-- Log In "Submit" Î≤ÑÌäº -->
-                                    <!-- index.html(Î©îÏù∏ÌôîÎ©¥Ïö© html)Î°ú redirect -->
+                                    <!-- Log In "Submit" πˆ∆∞ -->
+                                    <!-- index.html(∏ﬁ¿Œ»≠∏ÈøÎ html)∑Œ redirect -->
                                     <button class="login100-form-btn" type="submit" onclick="location.href = 'index.html'">
                                         
                                         Login
                                     </button>
                                 </div>
                                 
+
                                 <div class = "row justify-content-center centered-text">
                                     <div class="col-4">	
                                         <a href="#" class="txt2 centered-text">
-                                                ÌöåÏõêÍ∞ÄÏûÖ
+                                            »∏ø¯∞°¿‘
                                         </a>
                                     </div>
             
                                     <div class = "col-4 centered-text">
                                         <a href="#" class="txt2">
-                                            ÎπÑÎ∞ÄÎ≤àÌò∏ Ï∞æÍ∏∞
+                                            ∫Òπ–π¯»£ √£±‚
                                         </a>						
                                     </div>
                                 </div>
