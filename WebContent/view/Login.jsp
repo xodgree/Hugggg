@@ -34,30 +34,33 @@
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100 p-t-85 p-b-20">
-				<form class="login100-form validate-form">
+				<!-- <form class="login100-form validate-form">  -->
+				<form method = "post" name = "loginform" class="login100-form validate-form" action ="<%= request.getContextPath() %>/view/LoginDb.jsp">
 					<span class="login100-form-title p-b-70">
-						<!-- 웰컴 메세지 -->
-						Welcome
+						<!-- 웰컴 메세지 Welcome-->
+						토닥토닥
 					</span>
 					<span class="login100-form-avatar">
 						<!-- 아바타 이미지 -->
 						<img src="assets/assets_main/images/avatar.jpg" alt="AVATAR">
 					</span>
-
+						
+						<!-- email 입력 -->
 					<div class="wrap-input100 validate-input m-t-50 m-b-35" data-validate = "Enter username">
-						<input class="input100" type="text" name="username">
-						<!-- Username -->
-						<span class="focus-input100" data-placeholder="Username"></span>
+						<input class="input100" type="text" name="inputEmail">
+						<span class="focus-input100" data-placeholder="Email"></span>
 					</div>
 
+						<!-- password 입력 -->
 					<div class="wrap-input100 validate-input m-b-50" data-validate="Enter password">
-						<input class="input100" type="password" name="pass">
-						<!-- password -->
+						<input class="input100" type="password" name="inputPasswd">
 						<span class="focus-input100" data-placeholder="Password"></span>
 					</div>
 
 					<div class="container-login100-form-btn">
-						<button class="login100-form-btn" type="submit" onclick="location.href = 'index.html'">
+					<!-- input 태그에서 이동하도록 바꿈.
+						<button class="login100-form-btn" type="submit" onclick="location.href = 'index.html'">	<-->
+						<button class="login100-form-btn" type="submit">
 							<!-- Login button 텍스트 -->
 							Login
 						</button>
@@ -65,13 +68,13 @@
 					
 					<div class = "row justify-content-center centered-text">
 						<div class="col-4">	
-							<a href="#" class="txt2 centered-text">
+							<a href="SignUp.jsp" class="txt2 centered-text">
 									회원가입
 							</a>
 						</div>
 
 						<div class = "col-4 centered-text">
-							<a href="#" class="txt2">
+							<a href="FindPasswd.jsp" class="txt2">
 								비밀번호 찾기
 							</a>						
 						</div>

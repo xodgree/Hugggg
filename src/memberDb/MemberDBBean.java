@@ -276,4 +276,57 @@ public class MemberDBBean {
 				close(conn,rs,pstmt);
 			}return x;
 		}
+		//로그인 메소드
+		public int login(String inputEmail,String inputPasswd)throws Exception{
+			Connection conn = null;
+			PreparedStatement pstmt = null;
+			ResultSet rs = null;
+			String sql = "select passwd from members where email=?";
+			int loginResult = -1;	// -1 = 이메일 x, 0 = 비밀번호 x, 1 = 로그인 성공 
+			try {
+				conn = getConnection();
+				pstmt = conn.prepareStatement(sql);
+				pstmt.setString(1,inputEmail);
+				rs = pstmt.executeQuery();
+				if(rs.next()) {
+					if(rs.getString("passwd").equals(inputPasswd)) {
+						loginResult = 1;
+					}else {
+						loginResult = 0;
+					}
+				}
+				else {
+					loginResult = -1;
+				}
+				
+			}catch(Exception ex) {
+				ex.printStackTrace();
+			}finally {
+				close(conn,rs,pstmt);
+			}
+			return loginResult;
+		}
+		//로그인 - > 메인으로 넘어갈때 닉네임  가져가는 메소드
+		public String MainName(String inputEmail)throws Exception{
+			Connection conn = null;
+			PreparedStatement pstmt = null;
+			ResultSet rs = null;
+			String userName = null;
+			String sql = "select name from members where email=?";
+			try {
+				conn = getConnection();
+				pstmt = conn.prepareStatement(sql);
+				pstmt.setString(1,inputEmail);
+				rs = pstmt.executeQuery();
+				
+				if(rs.next()) {
+					userName = rs.getString("name");
+				}
+			}catch(Exception ex) {
+				ex.printStackTrace();
+			}finally {
+				close(conn,rs,pstmt);
+			}
+			return userName;
+		}
 	}
