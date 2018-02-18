@@ -30,13 +30,14 @@
 <!--===============================================================================================-->
 </head>
 <body>
-	
+	<div style="font-family:'BMJUA', sans-serif">주아</div>
+	 
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100 p-t-85 p-b-20">
 				<!-- <form class="login100-form validate-form">  -->
 				<form method = "post" name = "loginform" class="login100-form validate-form" action ="<%= request.getContextPath() %>/view/LoginDb.jsp">
-					<span class="login100-form-title p-b-70">
+					<span class="login100-form-title p-b-70" lang="ko">
 						<!-- 웰컴 메세지 Welcome-->
 						토닥토닥
 					</span>

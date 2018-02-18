@@ -31,9 +31,15 @@
 						<a href="Logout.jsp">logout</a>
 						</div>
 						<!-- <h1>This is <strong>your space</strong>. Have a good time!<br /> -->
-						<h1>
-						<strong><%= userName %></strong>님 환영합니다! 
-						</h1>
+						
+						<!-- 환영메세지 -->
+						<!-- txt_ko 스타일로 배민주아 폰트 적용 -->
+						<div class="txt_ko">
+							<h1>
+								<strong><%= userName %></strong>님 환영합니다!
+							</h1>
+						</div>
+						
 						<ul class="icons">
 							<li><a href="#" class="icon style2 fa-twitter"><span class="label">Twitter</span></a></li>
 							<li><a href="#" class="icon style2 fa-facebook"><span class="label">Facebook</span></a></li>
