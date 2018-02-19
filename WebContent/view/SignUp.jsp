@@ -65,14 +65,14 @@ if(request.getParameter("num")!=null){
 					<div class="wrap-input100 validate-input" data-validate = "Password is required">
 						<span class="label-input100">Password</span>
 						<!-- ����� ��й�ȣ input -->
-						<input class="input100" type="text" name="passwd" placeholder="*************">
+						<input class="input100" type="password" name="passwd" placeholder="*************">
 						<span class="focus-input100"></span>
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate = "Repeat Password is required">
 						<span class="label-input100">Repeat Password</span>
 						<!-- ����� ��й�ȣ ��Ȯ�� input -->
-						<input class="input100" type="text" name="re_passwd" placeholder="*************">
+						<input class="input100" type="password" name="re_passwd" placeholder="*************">
 						<span class="focus-input100"></span>
 					</div>
 
