@@ -7,10 +7,19 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="assets/assets_main/css/main.css" />
+
+<!-- 네비게이션바 스타일 -->
+
+
 <title>Visualize by TEMPLATED</title>
 </head>
 <body>
+	<!-- 사용자 정보를 session으로 확인합니다.
+	session에 사용자 정보가 없다면 Login.jsp로 이동합니다.
+	레이아웃을 만들기 위해서 주석으로 처리합니다. -->
 	<%-- <% String userName = (String)session.getAttribute("userName"); %>
 	<% String userEmail = (String)session.getAttribute("userEmail"); %>
 	
@@ -18,6 +27,19 @@
 		response.sendRedirect("Login.jsp");
 	}
 	%> --%>
+
+	<!-- 네비게이션바 -->
+	<div class="w3-top">
+		<div class="w3-bar w3-black w3-opacity-min">
+				<a href="#" class="w3-bar-item w3-button w3-green"><i class="fa fa-home"></i></a>
+				<a href="#" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i></a>
+				<a href="#" class="w3-bar-item w3-button"><i class="fa fa-globe"></i></a>
+				<a href="#" class="w3-bar-item w3-button"><i class="fa fa-sign-in"></i></a>
+				<a href="#" class="w3-bar-item w3-button w3-right"><i class="fa fa-search"></i></a>
+		</div>
+	</div>
+	
+	
 		<!-- Wrapper -->
 			<div id="wrapper">
 
@@ -36,7 +58,8 @@
 						<!-- txt_ko 스타일로 배민주아 폰트 적용 -->
 						<div class="txt_ko">
 							<h1>
-								<strong><%-- <%= userName %> --%></strong>님 환영합니다!
+								<!-- 테스트를 위해서 주석으로 처리합니다. -->
+								<strong><%-- <%= userName %> --%>탱그리</strong>님 환영합니다!
 							</h1>
 						</div>
 						
