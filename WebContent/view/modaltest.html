@@ -1,0 +1,139 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Modal Test</title>
+		<meta charset="euc-kr" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		
+		<link rel="stylesheet" href="assets/assets_diary/css/main.css" />
+
+        <!-- w3 css -->
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    </head>
+    
+	<body>
+		<!-- 일기쓰기 버튼 -->
+		<!-- To Do: 일기쓰기 버튼을 누르면 날짜를 선택할 수 있는 달력이 Modal로 생성됩니다. -->
+		<div style="text-align: center;">
+			<a href="#" class="button special" onclick="document.getElementById('calendar').style.display='block'">일기쓰기</a>
+		</div>
+		
+		<!-- id calendar로 modal를 만듭니다. -->
+        <div id="calendar" class="w3-modal">
+            <div class="w3-modal-content w3-animate-opacity">
+				<header class="w3-container w3-teal">
+                	<span onclick="document.getElementById('calendar').style.display='none'" 
+                	class="w3-button w3-display-topright">&times;</span>
+					<h2>달력</h2>
+				</header>
+				
+				<div class="w3-container">
+					<p>날짜 날짜 날짜 날짜 날짜 날짜 날짜</p>
+					<p>날짜 날짜 날짜 날짜 날짜 날짜 날짜</p>
+					<p>날짜 날짜 날짜 날짜 날짜 날짜 날짜</p>
+					<p>날짜 날짜 날짜 날짜 날짜 날짜 날짜</p>
+					<p>날짜 날짜 날짜 날짜 날짜 날짜 날짜</p>
+					<p>날짜 날짜 날짜 날짜 날짜 날짜 날짜</p>
+				</div>
+
+				<div style="text-align: center;">
+					<a href="#" class="button special" onclick="closeAndOpenModal('calendar', 'messagebox')">날짜확인</a>
+				</div>
+        	</div>
+        </div>
+
+		<!-- id messagebox로 modal를 만듭니다. -->
+        <div id="messagebox" class="w3-modal">
+				<div class="w3-modal-content w3-animate-opacity">
+					<header class="w3-container w3-teal">
+						<span onclick="document.getElementById('messagebox').style.display='none'" 
+						class="w3-button w3-display-topright">&times;</span>
+						<h2>일기쓰기</h2>
+					</header>
+					
+					<div class="w3-container" >
+						<p>일기를 여기에 씁니다.</p>
+						<p>일기를 여기에 씁니다.</p>
+						<p>일기를 여기에 씁니다.</p>
+						<p>일기를 여기에 씁니다.</p>
+						<p>일기를 여기에 씁니다.</p>
+						<p>일기를 여기에 씁니다.</p>
+						<p>일기를 여기에 씁니다.</p>
+					</div>
+
+					<div class="w3-container">
+						<p>이미지를 등록합니다.</p>
+					</div>
+	
+					<div style="text-align: center;">
+						<a href="#" class="button special" onclick="document.getElementById('messagebox').style.display='none'">일기쓰기 확인</a>
+					</div>
+				</div>
+			</div>
+	
+
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="container">
+					<ul class="icons">
+						<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="#" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+					</ul>
+				</div>
+				<div class="copyright">
+					&copy; Untitled. All rights reserved. Images <a href="https://unsplash.com">Unsplash</a> Design <a href="https://templated.co">TEMPLATED</a>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/assets_diary/js/jquery.min.js"></script>
+			<script src="assets/assets_diary/js/jquery.poptrox.min.js"></script>
+			<script src="assets/assets_diary/js/skel.min.js"></script>
+			<script src="assets/assets_diary/js/util.js"></script>
+			<script src="assets/assets_diary/js/main.js"></script>
+			
+			<script>
+			
+			function readURL(input) {
+				if (input.files && input.files[0]) {
+				    var reader = new FileReader();
+
+				    reader.onload = function(e) {
+				    	$('.image-upload-wrap').hide();
+
+				    	$('.file-upload-image').attr('src', e.target.result);
+				    	$('.file-upload-content').show();
+
+				    	$('.image-title').html(input.files[0].name);
+				    };
+
+				    reader.readAsDataURL(input.files[0]);
+
+					} else {
+						removeUpload();
+					}
+				}
+
+				function removeUpload() {
+					$('.file-upload-input').replaceWith($('.file-upload-input').clone());
+					$('.file-upload-content').hide();
+					$('.image-upload-wrap').show();
+				}
+				$('.image-upload-wrap').bind('dragover', function () {
+					$('.image-upload-wrap').addClass('image-dropping');
+				});
+				$('.image-upload-wrap').bind('dragleave', function () {
+					$('.image-upload-wrap').removeClass('image-dropping');
+				});
+
+				function closeAndOpenModal(close, open) {
+					document.getElementById(close).style.display='none';
+					document.getElementById(open).style.display='block';
+				}
+			</script>
+	</body>
+</html>
