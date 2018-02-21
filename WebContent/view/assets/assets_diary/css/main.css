@@ -14,7 +14,7 @@
 	src: url('../../assets_common/fonts/NanumBarunpenR.ttf'); 
   }
   
-  /* ë‚˜ëˆ”ë°”ë¥¸íœ í°íŠ¸ ì ìš© class selector */
+  /* ³ª´®¹Ù¸¥Ææ ÆùÆ® Àû¿ë class selector */
   .txt_ko {
 	  font-family: NanumBarunpenR;
   }
@@ -3021,6 +3021,11 @@
 		border-radius: 4px;
 	}
 
+	/* ÀÏ±â¾²±âÀÇ ¸Ş¼¼Áö »óÀÚ, ÆÄÀÏ »óÀÚ */
+	#main > .inner.inputbox {
+		max-width: 500px;
+	}
+
 	@media screen and (max-width: 980px) {
 
 		#main .image {
@@ -3153,8 +3158,10 @@
 			}
 
 		}
+
+
 		
-/* íŒŒì¼ ì—…ë¡œë“œ */
+/* ?ŒŒ?¼ ?—…ë¡œë“œ */
 .file-upload {
   background-color: #ffffff;
   width: 600px;

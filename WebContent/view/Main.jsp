@@ -32,11 +32,11 @@
 						</div>
 						<!-- <h1>This is <strong>your space</strong>. Have a good time!<br /> -->
 						
-						<!-- È¯ï¿½ï¿½ï¿½Þ¼ï¿½ï¿½ï¿½ -->
-						<!-- txt_ko ï¿½ï¿½Å¸ï¿½Ï·ï¿½ ï¿½ï¿½ï¿½ï¿½Ö¾ï¿½ ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ -->
+						<!-- È¯¿µ¸Þ¼¼Áö -->
+						<!-- txt_ko class selector¸¦ »ç¿ëÇÏ¿© ³ª´®¹Ù¸¥Ææ ÆùÆ®¸¦ Àû¿ëÇÕ´Ï´Ù. -->
 						<div class="txt_ko">
 							<h1>
-								<strong><%= userName %></strong>ï¿½ï¿½ È¯ï¿½ï¿½ï¿½Õ´Ï´ï¿½!
+								<strong><%= userName %></strong>´Ô È¯¿µÇÕ´Ï´Ù.
 							</h1>
 						</div>
 						
