@@ -11,13 +11,13 @@
 <title>Visualize by TEMPLATED</title>
 </head>
 <body>
-	<%-- <% String userName = (String)session.getAttribute("userName"); %>
+	<% String userName = (String)session.getAttribute("userName"); %>
 	<% String userEmail = (String)session.getAttribute("userEmail"); %>
 	
 	<% if(userName == null || userName.equals("")){
 		response.sendRedirect("Login.jsp");
 	}
-	%> --%>
+	%>
 		<!-- Wrapper -->
 			<div id="wrapper">
 
@@ -32,11 +32,11 @@
 						</div>
 						<!-- <h1>This is <strong>your space</strong>. Have a good time!<br /> -->
 						
-						<!-- È¯¿µ¸Þ¼¼Áö -->
-						<!-- txt_ko ½ºÅ¸ÀÏ·Î ¹è¹ÎÁÖ¾Æ ÆùÆ® Àû¿ë -->
+						<!-- È¯ï¿½ï¿½ï¿½Þ¼ï¿½ï¿½ï¿½ -->
+						<!-- txt_ko ï¿½ï¿½Å¸ï¿½Ï·ï¿½ ï¿½ï¿½ï¿½ï¿½Ö¾ï¿½ ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ -->
 						<div class="txt_ko">
 							<h1>
-								<strong><%-- <%= userName %> --%></strong>´Ô È¯¿µÇÕ´Ï´Ù!
+								<strong><%= userName %></strong>ï¿½ï¿½ È¯ï¿½ï¿½ï¿½Õ´Ï´ï¿½!
 							</h1>
 						</div>
 						
