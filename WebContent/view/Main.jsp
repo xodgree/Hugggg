@@ -41,7 +41,7 @@
 						</div>
 						
 						<ul class="icons">
-							<li><a href="#" class="icon style2 fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="iocn style2 fa-twitter"><span class="label">Twitter</span></a></li>
 							<li><a href="#" class="icon style2 fa-facebook"><span class="label">Facebook</span></a></li>
 							<li><a href="#" class="icon style2 fa-instagram"><span class="label">Instagram</span></a></li>
 							<li><a href="#" class="icon style2 fa-500px"><span class="label">500px</span></a></li>
