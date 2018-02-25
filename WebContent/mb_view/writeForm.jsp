@@ -42,7 +42,7 @@ if(request.getParameter("num")!=null){
 %>
 <body>
 <div class="container">
-   <form method = "post" name ="writeform" action="<%= request.getContextPath() %>/view/writePro.jsp">
+   <form method = "post" name ="writeform" action="<%= request.getContextPath() %>/mb_view/writePro.jsp">
         <div class="row">
             <div class="col-md-3"></div>
             <div class="col-md-6">

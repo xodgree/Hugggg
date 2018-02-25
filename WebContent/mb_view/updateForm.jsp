@@ -44,7 +44,7 @@
 %>
 <body>
 <div class="container">
-   <form method = "post" name ="writeform" action="<%= request.getContextPath() %>/view/updatePro.jsp">
+   <form method = "post" name ="writeform" action="<%= request.getContextPath() %>/mb_view/updatePro.jsp">
    <input type = "hidden" name = "num" value="<%=num %>">
    
         <div class="row">
