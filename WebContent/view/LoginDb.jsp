@@ -18,14 +18,17 @@ String inputPasswd = request.getParameter("inputPasswd");
 MemberDBBean instance =MemberDBBean.getInstance();
 int result = instance.login(inputEmail, inputPasswd);
 if(result == 1){
-	String userName = instance.MainName(inputEmail);
-
-session.setAttribute("userEmail", inputEmail);
-session.setAttribute("userName", userName);        
-response.sendRedirect("Main.jsp");  
-%>
-
-<%
+	/* result가 1이 맞고, email이 admin@hughug.com이면 회원관리 페이지로 보냅니다. 
+	result가 1이 맞고, email이 adim이 아니면 메인.jsp로 이동합니다. */
+	
+	if(inputEmail.equals("admin@hughug.com")){
+		response.sendRedirect("/HugHug/mb_view/list.jsp");
+	}else{
+		String userName = instance.MainName(inputEmail);
+		session.setAttribute("userEmail", inputEmail);
+		session.setAttribute("userName", userName);        
+		response.sendRedirect("Main.jsp");  
+	}
 }else if(result == 0){
 
 	%>
