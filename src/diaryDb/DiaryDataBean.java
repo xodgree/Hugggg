@@ -1,6 +1,6 @@
 package diaryDb;
 
-
+// 
 public class DiaryDataBean {
 	private int num;
 	private String regdate;
