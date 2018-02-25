@@ -1,5 +1,5 @@
-<%@page import="board.BoardDBBean"%>
-<%@page import="board.BoardDataBean"%>
+<%@page import="memberDb.MemberDBBean"%>
+<%@page import="memberDb.MemberDataBean"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -39,8 +39,8 @@
 <%
 	int num = Integer.parseInt(request.getParameter("num"));
 	try{
-		BoardDBBean dbPro = BoardDBBean.getInstance();
-		BoardDataBean member = dbPro.getContent(num,"update");
+		MemberDBBean dbPro = MemberDBBean.getInstance();
+		MemberDataBean member = dbPro.getContent(num,"update");
 %>
 <body>
 <div class="container">

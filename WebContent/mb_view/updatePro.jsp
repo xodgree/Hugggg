@@ -1,4 +1,4 @@
-<%@ page import = "board.BoardDBBean" %>
+<%@ page import = "memberDb.MemberDBBean" %>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -9,7 +9,7 @@
 </head>
 <body>
 <% request.setCharacterEncoding("euc-kr"); %>
-<jsp:useBean id="member" class="board.BoardDataBean">
+<jsp:useBean id="member" class="memberDb.MemberDataBean">
 	<jsp:setProperty name = "member" property="*"/>
 </jsp:useBean>
 
@@ -18,7 +18,7 @@
 	if(pageNum == null || pageNum =="1"){
 		pageNum ="1";
 	}
-	BoardDBBean dbPro = BoardDBBean.getInstance();
+	MemberDBBean dbPro = MemberDBBean.getInstance();
 	int pwdck = dbPro.updatemember(member);
 		%>
 <% if(pwdck == 1){ %>

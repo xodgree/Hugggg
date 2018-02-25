@@ -1,6 +1,6 @@
 <!-- ±Û º¸±â -->
-<%@page import="board.BoardDataBean"%>
-<%@page import="board.BoardDBBean"%>
+<%@page import="memberDb.MemberDataBean"%>
+<%@page import="memberDb.MemberDBBean"%>
 <%@page import="java.text.SimpleDateFormat"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
@@ -47,8 +47,8 @@ if(pageNum == null || pageNum == ""){
 }
 SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd hh:mm");
 try{
-	BoardDBBean dbPro = BoardDBBean.getInstance();
-	BoardDataBean member = dbPro.getContent(num,"content");
+	MemberDBBean dbPro = MemberDBBean.getInstance();
+	MemberDataBean member = dbPro.getContent(num,"content");
 
 %>
 <body>

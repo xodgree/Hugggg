@@ -1,4 +1,4 @@
-<%@page import="board.BoardDBBean"%>
+<%@page import="memberDb.MemberDBBean"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <%request.setCharacterEncoding("euc-kr"); %>
@@ -14,7 +14,7 @@ if(pageNum==null || pageNum==""){
 <%
 int num = Integer.parseInt(request.getParameter("num")); //deleteForm 에서 넘어온 데이터
 String passwd = request.getParameter("passwd");
-BoardDBBean dbPro = BoardDBBean.getInstance();
+MemberDBBean dbPro = MemberDBBean.getInstance();
 int check = dbPro.deletemember(num, passwd);
 if(check==1){
 	

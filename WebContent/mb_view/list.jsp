@@ -1,7 +1,7 @@
-<%@page import="board.BoardDataBean"%>
+<%@page import="memberDb.MemberDataBean"%>
 <%@page import="java.util.List"%>
 <%@page import="java.text.SimpleDateFormat"%>
-<%@page import="board.BoardDBBean"%>
+<%@page import="memberDb.MemberDBBean"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -54,7 +54,7 @@ $(document).ready(function(){
    int count = 0;
    int number = 0;
    List articleList = null;
-   BoardDBBean dbPro = BoardDBBean.getInstance();
+   MemberDBBean dbPro = MemberDBBean.getInstance();
    count = dbPro.getDataCount();
    if(count > 0){
       articleList = dbPro.articleList(startRow, endRow);}
@@ -73,9 +73,13 @@ $(document).ready(function(){
          <h2 class="text-center pull-left"> <span class="glyphicon glyphicon-list-alt"> </span> 회원목록<br>(전체 회원:<%=count%>) </h2>
       </div>
       
-      <!-- 회원등록 -->
+      <!-- 회원등록
       <div class="col-md-4 col-md-offset-4" style="text-align:right; margin-top:10px;">
          <a class="btn btn-default" href="writeForm.jsp" role="button">회원가입</a>
+      </div> -->
+      <!-- 로그아웃 -->
+      <div class="col-md-4 col-md-offset-4" style="text-align:right; margin-top:10px;">
+         <a class="btn btn-default" href="/HugHug/view/Logout.jsp" role="button">로그아웃</a>
       </div>
    </div>
       <%if(count ==0){
@@ -100,7 +104,7 @@ $(document).ready(function(){
           <tbody>
     
          <% for(int i =0; i < articleList.size();i++){
-             BoardDataBean article = (BoardDataBean)articleList.get(i); %>
+             MemberDataBean article = (MemberDataBean)articleList.get(i); %>
              
              <!-- 글 클릭시 글 보기 페이지로 넘어감.-->
          
