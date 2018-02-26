@@ -13,7 +13,7 @@
 <p class="w3-left" style="padding-left: 30px;"></p>
 <center>
 <div class="w3-container">
-	<b>글삭제</b><br>
+	<b>회원삭제</b><br>
 <form action="deletePro.jsp?pageNum=<%=pageNum%>" method="post" name="delForm" onsubmit="return deleteSave()">
 	<table class="table-bordered" width="360">
 	<tr height="30">
@@ -27,8 +27,8 @@
 	</tr> 
 	<tr height="30">
 		<td align="center">
-			<input type="submit" value="글삭제">
-			<input type="button" value="글목록" onclick="document.location.href='list.jsp?pageNum=<%=pageNum %>'">
+			<input type="submit" value="회원삭제">
+			<input type="button" value="회원목록" onclick="document.location.href='list.jsp?pageNum=<%=pageNum %>'">
 		</td>
 	</tr>
 	</table>
